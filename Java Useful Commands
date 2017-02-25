@@ -1,0 +1,21 @@
+Scanner in = new Scanner(System.in);
+String str = in.next();
+int myint = in.nextInt();
+
+/////////
+
+import java.util.*;
+
+public class Source
+{
+	public static void main(String[] args)
+	{
+
+	}
+}
+
+/////////
+
+int nr = String.valueOf(x).length();
+
+/////////
