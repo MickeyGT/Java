@@ -1,14 +1,20 @@
 import java.util.ArrayList;
 
 
-public abstract class Entity 
+public abstract class Entity
 {
-	protected int age;
+	protected int years,months,days;
 	protected String name;
-	
-	public Entity(int age, String name)
+
+	public Entity(int years,int months,int days, String name)
 	{
-		this.age = age;
+		this.years = years;
+		this.months=months;
+		this.days=days;
 		this.name = name;
+	}
+	public int getAge()
+	{
+		return years*365+months*30+days;
 	}
 }

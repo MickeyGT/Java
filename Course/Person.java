@@ -1,15 +1,15 @@
 import java.util.*;
 public class Person extends Entity
 {
-	
-	public Person(int age, String name) {
-		super(age, name);
-		// TODO Auto-generated constructor stub
+
+	public Person(int years,int months,int days, String name)
+	{
+		super(years, months, days, name);
 	}
 
 	@Override
 	public String toString()
 	{
-		return "Person{"+"age="+ age +", name='"+name+'\''+"}";
+		return "Person{"+"age="+ years +", name='"+name+'\''+"}";
 	}
 }
