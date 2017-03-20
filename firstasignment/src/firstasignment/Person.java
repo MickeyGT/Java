@@ -2,10 +2,22 @@ package firstasignment;
 
 public class Person implements IAgeingEntity
 {
+	@Override
+	public String toString()
+	{
+		return "Person{" +
+				"age=" + age +
+				", name='" + name + '\'' +
+				'}';
+	}
 
 	private IAge age;
 	private String name;
-	
+	Person(String nume, IAge vr)
+	{
+		name=nume;
+		age=vr;
+	}
 	@Override
 	public boolean isOlderThan(IAgeingEntity other)
 	{
@@ -23,7 +35,7 @@ public class Person implements IAgeingEntity
 		// TODO Auto-generated method stub
 		if(this.age.isGreaterThan(age))
 		{
-		    return true;
+			return true;
 		}
 		return false;
 	}
