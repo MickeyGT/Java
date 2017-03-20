@@ -30,10 +30,10 @@ public class Person implements IAgeingEntity
 	}
 
 	@Override
-	public boolean isOlderThan(IAge age)
+	public boolean isOlderThan(IAge varsta)
 	{
 		// TODO Auto-generated method stub
-		if(this.age.isGreaterThan(age))
+		if(age.isGreaterThan(varsta))
 		{
 			return true;
 		}

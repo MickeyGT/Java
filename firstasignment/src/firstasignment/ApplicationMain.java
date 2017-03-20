@@ -1,6 +1,6 @@
 package firstasignment;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class ApplicationMain {
 
@@ -14,9 +14,10 @@ public class ApplicationMain {
         personsGroup.addTo("asd",55,18,22);
         personsGroup.addTo("Gard",66,17,31);
         IAgeingEntity oldest = personsGroup.getOldest();
-        Age vr = new Age(20,2,3);
-        List<IAgeingEntity> olderThan = personsGroup.olderThan(vr);
-        for(IAgeingEntity temp: personsGroup.persons)
+        Age vr = new Age(200,2,3);
+        ArrayList<IAgeingEntity> rez = new ArrayList<IAgeingEntity>();
+        rez = personsGroup.olderThan(vr);
+        for(IAgeingEntity temp: rez)
             System.out.println(temp);
     }
 

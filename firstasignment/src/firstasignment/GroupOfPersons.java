@@ -6,7 +6,8 @@ import java.util.List;
 public class GroupOfPersons
 {
 
-	List<IAgeingEntity> persons = new ArrayList<IAgeingEntity>();
+	public ArrayList<IAgeingEntity> persons = new ArrayList<IAgeingEntity>();
+
 	public void addTo(String name,int ani,int luni,int zile)
 	{
 		Age ag= new Age(ani,luni,zile);
@@ -28,10 +29,10 @@ public class GroupOfPersons
 		return oldest;
 	}
 
-	public List<IAgeingEntity> olderThan(IAge age)
+	public ArrayList<IAgeingEntity> olderThan(IAge age)
 	{
 		// TODO Auto-generated method stub
-		List<IAgeingEntity> result = new ArrayList<IAgeingEntity>();
+		ArrayList<IAgeingEntity> result = new ArrayList<IAgeingEntity>();
 		for (IAgeingEntity person : persons)
 		{
 			if(person.isOlderThan(age))

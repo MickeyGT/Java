@@ -21,16 +21,16 @@ public class Age implements IAge
         days=zile;
     }
 
-    public boolean isGreaterThan(IAge age)
+    public boolean isGreaterThan(IAge varsta)
     {
-        return isGreaterThan(years,months,days);
+        return !(varsta.isGreaterThan(years,months,days));
     }
 
     public boolean isGreaterThan(int ani, int luni, int zile)
     {
         if(years*365+months*30+days>ani*365+luni*30+zile)
-            return false;
-        else
             return true;
+        else
+            return false;
     }
 }
