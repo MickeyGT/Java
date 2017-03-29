@@ -5,7 +5,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-       Matrix Ex = new Matrix();
        Scanner sc = new Scanner(System.in);
        int nrLinii= sc.nextInt();
        Checking.setNr(nrLinii);
@@ -15,7 +14,7 @@ public class Main
     		   int x = sc.nextInt();
     		   int y= sc.nextInt();
     		   int points = sc.nextInt();
-    		   Ex.matrx[x][y]=points;
+    		   Matrix.matrx[x][y]=points;
     	   }
        int nrIepuri = sc.nextInt();
        ArrayList<Iepure> Iepuri = new ArrayList<Iepure>();
