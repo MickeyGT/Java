@@ -6,12 +6,11 @@ public class Iepure
     // Est = 2.
     // Sud = 3.
     // Vest = 4.
-    int x,y,nrTricou,directie,valCos;
-    Iepure(int coordX,int coordY,int side,int nrTric)
+    int x,y,directie,valCos;
+    Iepure(int coordX,int coordY,int side)
     {
         x=coordX;
         y=coordY;
-        nrTricou=nrTric;
         switch(side)
         {
             case 1:
@@ -31,12 +30,59 @@ public class Iepure
 
     public void Advance()
     {
+        jumpToNext(directie);
+        collectEgg(x,y);
+    }
+
+    private void collectEgg(int x, int y)
+    {
+        switch(Pajiste.matrx[x][y])
+        {
+            case 0:
+                break;
+            default:
+                valCos+= Pajiste.matrx[x][y];
+                Pajiste.matrx[x][y]=0;
+                switchDirection();
+                break;
+        }
+    }
+
+    private void switchDirection()
+    {
+        switch(directie)
+        {
+            case 1:
+                directie = 4;
+                break;
+            case 2:
+                directie = 1;
+                break;
+            case 3:
+                directie = 2;
+                break;
+            case 4:
+                directie = 3;
+                break;
+        }
+    }
+
+    private void jumpToNext(int directie)
+    {
         switch(directie)
         {
             case 1:
                 x--;
+                break;
+            case 2:
+                y++;
+                break;
+            case 3:
+                x++;
+                break;
+            case 4:
+                y--;
+                break;
         }
-        valCos+=Matrix.matrx[x][y];
-        Matrix.matrx[x][y]=0;
     }
 }
