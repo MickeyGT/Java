@@ -17,9 +17,9 @@ public class Pajiste
 		matrx[x][y]=new ParcelaCuOu(points);
 	}
 
-	public static void collect(int x, int y)
+	public static int collect(int x, int y)
 	{
-		matrx[x][y].act();
+		return matrx[x][y].act();
 	}
 
 

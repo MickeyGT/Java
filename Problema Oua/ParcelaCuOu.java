@@ -6,5 +6,10 @@ public class ParcelaCuOu implements IParcela
 	{
 		nrPoints=points;
 	}
-	
+
+	@Override
+	public int act()
+	{
+		return nrPoints;
+	}
 }

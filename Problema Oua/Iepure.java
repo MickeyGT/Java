@@ -1,4 +1,5 @@
-public class Iepure {
+public class Iepure
+{
 	// Directii:
 	// Nord = 1.
 	// Est = 2.
@@ -10,7 +11,7 @@ public class Iepure {
 	{
 		x = coordX;
 		y = coordY;
-		switch (side) 
+		switch (side)
 		{
 		case 1:
 			directie = 1;
@@ -30,12 +31,15 @@ public class Iepure {
 	public void Advance()
 	{
 		jumpToNext(directie);
-		collectEgg(x, y);
+		int res= collectEgg(x, y);
+		if(res>0)
+			switchDirection();
+		valCos+=res;
 	}
 
-	private void collectEgg(int x, int y)
+	private int collectEgg(int x, int y)
 	{
-		Pajiste.collect(x,y);
+		return Pajiste.collect(x,y);
 	}
 
 	private void switchDirection() 
@@ -74,5 +78,15 @@ public class Iepure {
 			y--;
 			break;
 		}
+	}
+
+	public int removeIfOut()
+	{
+		return IsOut(x,y);
+	}
+
+	private int IsOut(int x, int y)
+	{
+		if(x)
 	}
 }

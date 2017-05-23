@@ -21,12 +21,12 @@ public class Main
 		{
 			int x = sc.nextInt();
 			int y = sc.nextInt();
-			Iepuri.addRabbit(x, y);
+			Iepuri.addRabbit(x, y,i);
 		}
 		int nrOuaCulese = 0, iepuriAfara = 0;
 		while (nrOuaCulese != nrOua && nrIepuri != iepuriAfara) 
 		{
-			Iepuri.makeNextMove();
+			Iepuri.makeNextMove(nrLinii);
 		}
 	}
 }
