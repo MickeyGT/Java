@@ -2,7 +2,8 @@ public class Checking
 {
 	static int nrLinii;
 
-	static void setNr(int nr) {
+	static void setNr(int nr)
+	{
 		nrLinii = nr;
 	}
 

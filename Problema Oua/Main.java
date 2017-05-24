@@ -7,6 +7,7 @@ public class Main
 		Scanner sc = new Scanner(System.in);
 		int nrLinii = sc.nextInt();
 		Checking.setNr(nrLinii);
+		Pajiste pajiste = new Pajiste(nrLinii);
 		int nrOua = sc.nextInt();
 		for (int i = 1; i <= nrOua; i++) 
 		{

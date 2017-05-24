@@ -15,17 +15,20 @@ public class GroupOfRabbits {
 
 	public void makeNextMove(int nrLinii)
 	{
-		for (Iepure temp : Iepuri)
+		while(Iepuri.size()!=0)
 		{
-			if(temp.removeIfOut(nrLinii))
+			for (Iepure temp : Iepuri)
 			{
-				Iepuri.remove(temp);
-				System.out.println("Rabbit"+temp.nrIndice+"has been deleted.");
-			}
-			else
-			{
-				System.out.println("Rabbit"+temp.nrIndice+"has advanced.");
-				temp.Advance();
+				if (temp.removeIfOut(nrLinii))
+				{
+					Iepuri.remove(temp);
+					System.out.println("Rabbit " + temp.nrDeOrdine + " has been deleted. He was at (" + temp.x + "/" + temp.y + ") and had a basket of value:" + temp.valCos);
+					break;
+				} else
+				{
+					System.out.println("Rabbit " + temp.nrDeOrdine + " has advanced. He was at (" + temp.x + "/" + temp.y + ") and had a basket of value:" + temp.valCos);
+					temp.Advance();
+				}
 			}
 		}
 	}

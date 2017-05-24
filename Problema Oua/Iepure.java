@@ -5,25 +5,26 @@ public class Iepure
 	// Est = 2.
 	// Sud = 3.
 	// Vest = 4.
-	int x, y, directie, valCos;
+	int x, y, directie, valCos,nrDeOrdine;
 
-	Iepure(int coordX, int coordY, int side)
+	Iepure(int coordX, int coordY, int side,int number)
 	{
 		x = coordX;
 		y = coordY;
+		nrDeOrdine = number;
 		switch (side)
 		{
 		case 1:
-			directie = 1;
-			break;
-		case 2:
 			directie = 3;
 			break;
+		case 2:
+			directie = 1;
+			break;
 		case 4:
-			directie = 4;
+			directie = 2;
 			break;
 		case 8:
-			directie = 2;
+			directie = 4;
 			break;
 		}
 	}
@@ -47,16 +48,16 @@ public class Iepure
 		switch (directie) 
 		{
 		case 1:
-			directie = 4;
-			break;
-		case 2:
-			directie = 1;
-			break;
-		case 3:
 			directie = 2;
 			break;
-		case 4:
+		case 2:
 			directie = 3;
+			break;
+		case 3:
+			directie = 4;
+			break;
+		case 4:
+			directie = 1;
 			break;
 		}
 	}
@@ -80,13 +81,14 @@ public class Iepure
 		}
 	}
 
-	public int removeIfOut()
+	public boolean removeIfOut(int nrLinii)
 	{
-		return IsOut(x,y);
+		return IsOut(x,y,nrLinii);
 	}
 
-	private int IsOut(int x, int y)
+	private boolean IsOut(int x, int y,int nrLinii)
 	{
-		if(x)
+		return x<=0||x>nrLinii||y<=0||y>nrLinii;
+
 	}
 }
