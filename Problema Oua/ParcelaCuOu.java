@@ -10,6 +10,9 @@ public class ParcelaCuOu implements IParcela
 	@Override
 	public int act()
 	{
-		return nrPoints;
+		int returnValue = nrPoints;
+		nrPoints=0;
+		return returnValue;
+
 	}
 }

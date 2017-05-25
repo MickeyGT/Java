@@ -34,7 +34,10 @@ public class Iepure
 		jumpToNext(directie);
 		int res= collectEgg(x, y);
 		if(res>0)
+		{
 			switchDirection();
+			Pajiste.matrx[x][y]=new ParcelaFaraOu();
+		}
 		valCos+=res;
 	}
 
